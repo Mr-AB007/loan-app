@@ -1,0 +1,15 @@
+package org.anubhav.loan;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * Loan Application
+ *
+ */
+@SpringBootApplication
+public class LoanAppApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(LoanAppApplication.class, args);
+    }
+}

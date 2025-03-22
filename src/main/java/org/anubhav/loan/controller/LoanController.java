@@ -18,6 +18,12 @@ public class LoanController {
         this.loanService = loanService;
     }
 
+    @GetMapping("loans")
+    public ResponseEntity<List<LoanDto>> findAllLoans() {
+        List<LoanDto> loanDtoList = loanService.findAllLoans();
+        return loanDtoList.isEmpty() ? ResponseEntity.noContent().build()
+                : ResponseEntity.ok(loanDtoList);
+    }
     @GetMapping("criteria")
     public ResponseEntity<List<LoanDto>> findLoansByCriteria() {
         List<LoanDto> loanDtoList = loanService.findLoansByCriteria();

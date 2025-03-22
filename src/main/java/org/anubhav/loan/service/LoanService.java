@@ -18,6 +18,17 @@ public class LoanService {
     @Autowired
     LoanRepository loanRepository;
 
+    public List<LoanDto> findAllLoans(){
+        return loanRepository.findAll().stream()
+                .map(loan -> new LoanDto(
+                        loan.getLoanId(),
+                        loan.getLoanAmount(),
+                        loan.getLoanTerm(),
+                        loan.getInterestRate(),
+                        loan.getApplicationDate(),
+                        loan.getStatus()
+                )).collect(Collectors.toList());
+    }
     public List<LoanDto> findLoansByCriteria(){
         return loanRepository.findAll().stream()
                 .filter(loan -> loan.getLoanAmount() > 1_000_000 && loan.getStatus().equalsIgnoreCase("approved") && loan.getLoanTerm() > 7 * 12)

@@ -1,4 +1,4 @@
-package org.anubhav.loan.service;
+package org.anubhav.loan.security;
 
 import org.anubhav.loan.entity.Users;
 import org.anubhav.loan.repository.UserRepository;

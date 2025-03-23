@@ -75,4 +75,15 @@ public class LoanService {
                 )).collect(Collectors.toList());
 
     }
+    public List<LoanDto> findLoanByCustomerId(Integer customerId){
+        return loanRepository.findAll().stream().filter(loan -> loan.getCustomer().getCustomerId() == customerId)
+                .map(loan -> new LoanDto(
+                        loan.getLoanId(),
+                        loan.getLoanAmount(),
+                        loan.getLoanTerm(),
+                        loan.getInterestRate(),
+                        loan.getApplicationDate(),
+                        loan.getStatus()
+                )).collect(Collectors.toList());
+    }
 }

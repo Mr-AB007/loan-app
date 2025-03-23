@@ -47,4 +47,10 @@ public class LoanController {
         return customerDtoList.isEmpty() ? ResponseEntity.noContent().build()
                 : ResponseEntity.ok(customerDtoList);
     }
+    @GetMapping("loan/{customerId}")
+    public ResponseEntity<List<LoanDto>> findLoanByCustomerId(@PathVariable Integer customerId){
+        List<LoanDto> loanDtoList = loanService.findLoanByCustomerId(customerId);
+        return loanDtoList.isEmpty()? ResponseEntity.noContent().build():
+                ResponseEntity.ok(loanDtoList);
+    }
 }

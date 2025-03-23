@@ -7,7 +7,7 @@ INSERT INTO customer (customer_id, name, email, credit_score) VALUES (5, 'David 
 
 -- Insert more loans (Some with latest dates to prevent rejection)
 INSERT INTO loan (loan_id, customer_id, loan_amount, loan_term, interest_rate, application_date, status)
-VALUES (1, 1, 1500000, 96, 5.5, '2025-03-15T10:30:00', 'approved');
+VALUES (1, 2, 1500000, 96, 5.5, '2025-03-15T10:30:00', 'approved');
 
 INSERT INTO loan (loan_id, customer_id, loan_amount, loan_term, interest_rate, application_date, status)
 VALUES (2, 1, 500000, 60, 4.5, '2024-01-10T09:15:00', 'approved');

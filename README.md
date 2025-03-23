@@ -102,7 +102,7 @@ The application will start on **http://localhost:8001**.
 ## 📌 Author
 **Anubhav Ranjan**
 - GitHub: [Mr-AB007](https://github.com/Mr-AB007)
-- LinkedIn: [Anubhav Ranjan](https://www.linkedin.com/in/anubhavranjan007/)
+- LinkedIn: [Anubhav Ranjan](https://www.linkedin.com/in/anubhav-ranjan007/)
 
 ---
 🚀 **Happy Coding!**
